@@ -20,10 +20,12 @@ import 'package:fullstack_dev_test/router/app_router.dart'
     show AppRouter, AppRouterImpl;
 import 'package:fullstack_dev_test/router/router.dart' show routesConfig;
 import 'package:get_it/get_it.dart' show GetIt;
+import 'package:url_strategy/url_strategy.dart' show setPathUrlStrategy;
 
 final _getItInstance = GetIt.instance;
 
 Future<AppInjector> startAppService() async {
+  setPathUrlStrategy();
   final firebaseApp = await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

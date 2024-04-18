@@ -11,7 +11,7 @@ Future<void> routesConfig(AppInjector injector) async {
     routes: [
       CountriesRoute(injector: injector).route(),
     ],
-    errorBuilder: (_, state) => const NotFoundPage(),
+    errorBuilder: (_, state) => NotFoundPage(appRouter: injector.get()),
   );
 
   injector.get<AppRouter>().setProvider(provider);

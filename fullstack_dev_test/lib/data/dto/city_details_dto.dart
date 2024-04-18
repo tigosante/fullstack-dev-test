@@ -9,7 +9,7 @@ class CityDetailsDTO extends CityDetailsEntity {
 
   factory CityDetailsDTO.fromJson(Map<String, dynamic> map) {
     return CityDetailsDTO(
-      title: map['title'] as String,
+      title: (map['title'] as String).trim(),
       topics: List.from(map['topics'])
           .map((e) => TopicDTO.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -25,8 +25,8 @@ class TopicDTO extends TopicEntity {
 
   factory TopicDTO.fromJson(Map<String, dynamic> map) {
     return TopicDTO(
-      title: map['title'] as String,
-      description: map['description'] as String,
+      title: (map['title'] as String).trim(),
+      description: (map['description'] as String).trim(),
     );
   }
 }

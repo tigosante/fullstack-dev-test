@@ -8,8 +8,8 @@ class CityDTO extends CityEntity {
 
   factory CityDTO.fromJson(Map<String, dynamic> map) {
     return CityDTO(
-      name: map['city'] as String,
-      subcountry: map['subcountry'] as String,
+      name: (map['city'] as String).trim(),
+      subcountry: (map['subcountry'] as String).trim(),
     );
   }
 }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fullstack_dev_test/ui/widgets/widgets.dart';
+import 'package:fullstack_dev_test/extensions/extensions.dart'
+    show TranslateExtenion;
+import 'package:fullstack_dev_test/ui/widgets/widgets.dart'
+    show TextWidget, PrimaryButtonWidget;
 
 class ErrorBodyWidget extends StatelessWidget {
   const ErrorBodyWidget({
@@ -25,19 +28,9 @@ class ErrorBodyWidget extends StatelessWidget {
                 textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 16),
-          TextButton(
+          PrimaryButtonWidget(
             onPressed: _onRetry,
-            style: ButtonStyle(
-              backgroundColor:
-                  MaterialStateProperty.all<Color>(Colors.teal.shade700),
-            ),
-            child: TextWidget(
-              text: 'Retry',
-              styleFunction: (textTheme) => textTheme.bodyMedium?.copyWith(
-                color: Colors.white,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
+            title: 'retry'.translate(),
           ),
         ],
       ),

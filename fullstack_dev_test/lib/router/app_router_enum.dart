@@ -1,5 +1,8 @@
+const _countiesPath = '/counties';
+
 enum AppRouterEnum {
-  counties(path: '/counties'),
+  home(path: _countiesPath),
+  counties(path: _countiesPath),
   cities(
     path: ':country_name/cities',
     params: {'country_name': String},

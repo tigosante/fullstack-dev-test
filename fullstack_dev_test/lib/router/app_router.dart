@@ -6,6 +6,7 @@ mixin AppRouter {
   RouterConfig<Object>? get routerConfig;
 
   void back();
+  void reaplce(AppRouterEnum route);
   void go(AppRouterEnum route, {Map<String, dynamic> params = const {}});
 
   void setProvider(GoRouter provider);
@@ -23,6 +24,11 @@ class AppRouterImpl implements AppRouter {
   @override
   void back() {
     _provider.pop();
+  }
+
+  @override
+  void reaplce(AppRouterEnum route) {
+    _provider.replace(route.path);
   }
 
   @override
