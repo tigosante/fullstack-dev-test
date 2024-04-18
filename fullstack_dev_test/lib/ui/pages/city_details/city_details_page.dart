@@ -87,6 +87,8 @@ class _CityDetailsPageState extends State<CityDetailsPage> {
         physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextWidget(
               text: _cityDetails.title,
@@ -101,6 +103,8 @@ class _CityDetailsPageState extends State<CityDetailsPage> {
               )
             else
               Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: _cityDetails.topics
                     .map(
                       (data) => Padding(
