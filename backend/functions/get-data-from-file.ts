@@ -1,12 +1,10 @@
 import * as fs from "fs";
 import { parse } from "csv-parse";
-import { Logger } from "../shared/logger";
 import { CountryDataType, CountryIfoDataType } from "../shared/types";
 
 export async function getDataFromFile(
   filePath: string
 ): Promise<CountryDataType> {
-  console.log(filePath);
   if (filePath.trim() === "") {
     throw Error("path is empty!");
   }
@@ -29,7 +27,6 @@ export async function getDataFromFile(
           reject(Error("records is empty!"));
           return;
         }
-        Logger.success("CSV file read successfully!");
         resolve(records);
       })
       .on("error", function (error) {
