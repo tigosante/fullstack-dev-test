@@ -80,7 +80,7 @@ class DataRepositoryImpl implements DataRepository {
       return Right(CityDetailsDTO.fromJson(data));
     } on BaseException catch (baseException) {
       return Left(baseException);
-    } on Exception catch (e, st) {
+    } on Exception {
       return Left(PlatformException());
     }
   }
