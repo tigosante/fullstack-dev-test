@@ -57,6 +57,10 @@ Centraliza todos os componentes da aplicação e seu design system (baseado no a
 3. Copie o código informado e salve em algum lugar. (esse código não poderá ser recuperado no painel).
 4. Salve o a chave no arquivo **env/env.json**.
 
+
+#### Flutter
+**versão: 3.19.5**
+
 #### RUN
 **OBS:** *O projeto roda apenas na web, por ser mais rápido de configurar.*
 
