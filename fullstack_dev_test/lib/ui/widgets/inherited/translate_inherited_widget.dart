@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fullstack_dev_test/extensions/extensions.dart';
-import 'package:fullstack_dev_test/infra/infra.dart' show TranslateService;
+import 'package:fullstack_dev_test/infra/infra.dart'
+    show TranslateService, TranslateServiceExtenion;
 
 class TranslateInheritedWidget extends InheritedWidget {
   const TranslateInheritedWidget({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fullstack_dev_test/domain/domain.dart'
     show GetCityDeatilsUsecase, CityDetailsEntity;
-import 'package:fullstack_dev_test/extensions/extensions.dart';
+import 'package:fullstack_dev_test/infra/infra.dart' show TranslateExtenion;
 import 'package:fullstack_dev_test/ui/widgets/widgets.dart';
 
 class CityDetailsPage extends StatefulWidget {

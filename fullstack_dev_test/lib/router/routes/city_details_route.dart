@@ -1,5 +1,5 @@
 import 'package:fullstack_dev_test/router/router.dart';
-import 'package:fullstack_dev_test/ui/pages/city_details/city_details_page.dart';
+import 'package:fullstack_dev_test/ui/pages/city_details_page.dart';
 import 'package:go_router/go_router.dart' show GoRoute;
 
 class CityDetailsRoute extends BaseRoute {

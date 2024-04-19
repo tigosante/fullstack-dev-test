@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fullstack_dev_test/domain/domain.dart';
-import 'package:fullstack_dev_test/extensions/extensions.dart';
+import 'package:fullstack_dev_test/infra/infra.dart' show TranslateExtenion;
 import 'package:fullstack_dev_test/ui/pages/country/country_controller.dart';
 import 'package:fullstack_dev_test/ui/widgets/widgets.dart';
 

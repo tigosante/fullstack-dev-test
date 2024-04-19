@@ -10,12 +10,15 @@ import 'package:fullstack_dev_test/data/repository/data_repository.dart';
 import 'package:fullstack_dev_test/domain/usecase/get_cities_usecase.dart';
 import 'package:fullstack_dev_test/domain/usecase/get_city_details_usecase.dart';
 import 'package:fullstack_dev_test/domain/usecase/get_countries_usecase.dart';
-import 'package:fullstack_dev_test/extensions/extensions.dart';
 import 'package:fullstack_dev_test/infra/app_env.dart' show AppEnv;
 import 'package:fullstack_dev_test/infra/app_injector.dart'
     show AppInjector, AppInjectorImpl, InstanceType;
 import 'package:fullstack_dev_test/infra/infra.dart'
-    show DefaultFirebaseOptions, TranslateService, TranslateServiceImpl;
+    show
+        DefaultFirebaseOptions,
+        TranslateService,
+        TranslateServiceExtenion,
+        TranslateServiceImpl;
 import 'package:fullstack_dev_test/router/app_router.dart'
     show AppRouter, AppRouterImpl;
 import 'package:fullstack_dev_test/router/router.dart' show routesConfig;
