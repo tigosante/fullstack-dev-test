@@ -24,6 +24,7 @@ class FirestoreDataSourceImpl implements FirestoreDataSource {
     if (_lastCountry != null) {
       query = query.startAfterDocument(_lastCountry!);
     }
+
     late QuerySnapshot<Map<String, dynamic>> result;
     try {
       result = await query.get();
@@ -33,6 +34,8 @@ class FirestoreDataSourceImpl implements FirestoreDataSource {
     if (result.docs.isEmpty) {
       throw NotFoundException(codeSuffix: 'country');
     }
+
+    _lastCountry = result.docs.last;
     return result.docs.map((doc) => doc.id).toList()
       ..removeWhere((map) => map.isEmpty);
   }
