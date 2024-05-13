@@ -43,7 +43,6 @@ jobs:
           git init
           git config --global user.email $USER_EMAIL
           git config --global user.name $USER_NAME
-          git status
           git remote add origin git@github.com:tigosante/fullstack-dev-test.git
           git checkout -b gh-pages
           git add --all
