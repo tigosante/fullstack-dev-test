@@ -6,7 +6,7 @@ workflows:
     environment:
       flutter: 3.19.6
       groups:
-        - GEMINI
+        - gemini
         - firebase
 
     triggering:
