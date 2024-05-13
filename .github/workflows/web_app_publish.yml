@@ -37,5 +37,5 @@ jobs:
 
       - name: Deploy
         working-directory: frontend/scripts
-        run: bash send_code_builded_to_git.sh --user-name=$USER_NAME --user-email=$USER_EMAIL
+        run: bash send_code_builded_to_git.sh
 #
