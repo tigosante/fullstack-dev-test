@@ -18,17 +18,20 @@ for i in "$@" ; do
   esac
 done
 
+echo "-> User name: $USER_NAME"
+echo "-> User email: $USER_EMAIL"
+
 if git status | grep -q "fatal: not a git repository";
   then
-    git config --global init.defaultBranch main
+    git config init.defaultBranch main
     git init
+    git remote add origin git@github.com:tigosante/fullstack-dev-test.git
 else
   git status
 fi
 
-git config --global user.email $USER_EMAIL
-git config --global user.name $USER_NAME
-git remote add origin git@github.com:tigosante/fullstack-dev-test.git
+git config user.email $USER_EMAIL
+git config user.name $USER_NAME
 git checkout -b gh-pages
 git add --all
 git commit -m "update"
