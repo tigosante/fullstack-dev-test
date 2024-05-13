@@ -1,6 +1,8 @@
 #!/bin/bash
 
+echo $PWD
 cd ../build/web
+echo $PWD
 
 if git status | grep -q "fatal: not a git repository";
   then
