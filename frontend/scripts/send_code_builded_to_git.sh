@@ -22,13 +22,13 @@ if git status | grep -q "fatal: not a git repository";
   then
     git config --global init.defaultBranch main
     git init
-    git config --global user.email $USER_EMAIL
-    git config --global user.name $USER_NAME
-    git remote add origin git@github.com:tigosante/fullstack-dev-test.git
 else
   git status
 fi
 
+git config --global user.email $USER_EMAIL
+git config --global user.name $USER_NAME
+git remote add origin git@github.com:tigosante/fullstack-dev-test.git
 git checkout -b gh-pages
 git add --all
 git commit -m "update"
