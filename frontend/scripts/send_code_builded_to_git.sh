@@ -26,7 +26,7 @@ if git status | grep -q "fatal: not a git repository";
     git config --global user.name $USER_NAME
     git remote add origin git@github.com:tigosante/fullstack-dev-test.git
 else
-#
+  git status
 fi
 
 git checkout -b gh-pages
