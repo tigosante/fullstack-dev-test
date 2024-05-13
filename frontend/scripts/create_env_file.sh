@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "O diretório atual é: $PWD"
-
 FILE_PATH=../env.json
 touch $FILE_PATH
 
