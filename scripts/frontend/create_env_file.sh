@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE_PATH=../env.json
+FILE_PATH=../../frontend/env.json
 touch $FILE_PATH
 
 for i in "$@" ; do

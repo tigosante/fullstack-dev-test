@@ -1,0 +1,36 @@
+workflows:
+  WEB:
+    name: Build Web
+    max_build_duration: 30
+    instance_type: mac_mini_m1
+    environment:
+      flutter: 3.19.6
+      groups:
+        - GEMINI
+        - firebase
+
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: "main"
+          include: true
+          source: true
+      cancel_previous_builds: true
+
+    scripts:
+      - name: "Create env.json file"
+        script: |
+          bash scripts/frontend/create_env_file.sh;
+      - name: "Enable web"
+        script: |
+          flutter config --enable-web;
+      - name: "Build web"
+        script: |
+          cd frontend;
+          flutter build web --release --dart-define-from-file=env.json;
+          cd build/web;
+          7z a -r ../web.zip ./*
+
+    artifacts:
+      - frontend/build/*.zip
