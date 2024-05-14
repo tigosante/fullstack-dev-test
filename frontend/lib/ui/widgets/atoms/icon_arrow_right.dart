@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class IconArrowRight extends StatelessWidget {
-  const IconArrowRight({super.key});
+  const IconArrowRight({super.key, Color? color}) : _color = color;
+
+  final Color? _color;
 
   @override
   Widget build(BuildContext context) {
-    return const Icon(
+    return Icon(
       Icons.keyboard_arrow_right_rounded,
-      color: Colors.black,
+      color: _color,
     );
   }
 }

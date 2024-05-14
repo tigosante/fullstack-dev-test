@@ -18,6 +18,8 @@ class Application extends StatelessWidget {
       translateService: _injector.get(),
       child: MaterialApp.router(
         routerConfig: _injector.get<AppRouter>().routerConfig,
+        theme: Theme.of(context).copyWith(
+            colorScheme: const ColorScheme.light(primary: Colors.teal)),
       ),
     );
   }

@@ -27,10 +27,7 @@ class ListItemsWidget extends StatelessWidget {
       controller: _scrollController,
       padding: const EdgeInsets.all(16),
       physics: const BouncingScrollPhysics(),
-      separatorBuilder: (context, index) => Divider(
-        height: 0,
-        color: Colors.grey.shade200,
-      ),
+      separatorBuilder: (context, index) => const DividerWidget(),
       itemBuilder: (context, index) {
         return ItemListWidget(
           title: _items[index].title,

@@ -41,14 +41,16 @@ class FirestoreDataSourceImpl implements FirestoreDataSource {
   }
 
   @override
-  Future<List<Map<String, dynamic>>> getCities(
-      {required String countryName}) async {
+  Future<List<Map<String, dynamic>>> getCities({
+    required String countryName,
+  }) async {
     return _countryRef.doc(countryName).get().then((values) {
       if (!values.exists) {
         throw NotFoundException(codeSuffix: 'cities');
       }
 
-      return List.from(values.data()!['cities']).cast();
+      return List<Map<String, dynamic>>.from(
+          values.data()!['cities'] as Iterable);
     });
   }
 }

@@ -17,9 +17,8 @@ class PrimaryButtonWidget extends StatelessWidget {
     return TextButton(
       onPressed: _onPressed,
       style: ButtonStyle(
-        backgroundColor:
-            MaterialStateProperty.all<Color>(Theme.of(context).primaryColor),
-      ),
+          backgroundColor: MaterialStateProperty.all<Color>(
+              Theme.of(context).colorScheme.primary)),
       child: TextWidget(
         text: _title,
         styleFunction: (textTheme) => textTheme.bodyMedium?.copyWith(

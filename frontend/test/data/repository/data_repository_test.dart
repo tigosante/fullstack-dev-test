@@ -103,7 +103,7 @@ void main() {
       group('getCities - SUCCESS', () {
         const countryName = 'Brazil';
         final cities = <Map<String, dynamic>>[
-          {'city': "Brasília", "subcountry": "DF"},
+          {'city': 'Brasília', 'subcountry': 'DF'},
         ];
         when(firestoreDataSource.getCities(countryName: countryName))
             .thenAnswer((_) async => cities);
@@ -187,9 +187,9 @@ void main() {
         const subCountryName = 'DF';
         const countryName = 'Brazil';
         final cityDetails = {
-          "title": 'Brasília',
-          "topics": [
-            {"title": "Capital", "description": "Capital do Brasil"},
+          'title': 'Brasília',
+          'topics': [
+            {'title': 'Capital', 'description': 'Capital do Brasil'},
           ]
         };
         when(geminiDataSource.getCityDetails(

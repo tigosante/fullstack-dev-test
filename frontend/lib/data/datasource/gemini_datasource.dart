@@ -25,7 +25,8 @@ class GeminiDataSourceImpl implements GeminiDataSource {
     required String country,
     required String subCountry,
   }) {
-    return '''me mostre dados sobre o que fazer na cidade : $city - $subCountry - $country
+    return '''
+    me mostre dados sobre o que fazer na cidade : $city - $subCountry - $country
     - use o seguinte modelo: {
       "title": "breve descrição da cidade",
       "topics": [
@@ -46,9 +47,10 @@ class GeminiDataSourceImpl implements GeminiDataSource {
   }) async {
     try {
       final response = await _client.text(
-          _getPrompts(city: city, country: country, subCountry: subCountry));
+        _getPrompts(city: city, country: country, subCountry: subCountry),
+      );
       final data = response?.content?.parts?.last.text?.trim();
-      return jsonDecode(data ?? '{}');
+      return jsonDecode(data ?? '{}') as Map<String, dynamic>;
     } on Exception {
       throw DatasourceException(clientName: 'gemini');
     }
