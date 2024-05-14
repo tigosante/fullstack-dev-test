@@ -1,5 +1,5 @@
 # Smash Fullstack dev case
-The fullstack developer case for Smash admission process. 
+The fullstack developer case for Smash admission process.
 
 > Estimated time to complete: 30min
 
@@ -27,7 +27,7 @@ This test aims to assess the candidate's affinity with the main technologies use
 > Connection with Firebase Admin SDK is important for building backend functions, this topic will evaluate the ability to create and manipulate data using Firestore Admin SDK
 
  - [ ] Create an script to import/create data [data/world-cities.csv] into your firestore collections from the previous topic
- 
+
 ## Flutter
 
 > Show all your creativity! In this topic, the ability to structure screens and connect them with data in the backend will be evaluated. Feel free to create!
@@ -36,7 +36,7 @@ This test aims to assess the candidate's affinity with the main technologies use
  - [ ] Follow the UX Diagrams to create the screens
  - [ ] Connect with Firebase Firestore collections built in the previous topics
  - [ ] Display the data and create navigation between them
-  
+
 ## Git
 
 > Its time to finish!
@@ -47,3 +47,6 @@ This test aims to assess the candidate's affinity with the main technologies use
 ## Issues and Questions
 
 > feel free to open issues with your questions and suggestions
+
+# Project Web App
+#### Link: [Web App](https://web-app.codemagic.app/counties)
